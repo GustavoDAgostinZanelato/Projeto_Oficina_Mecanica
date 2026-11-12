@@ -1,0 +1,39 @@
+@Clientes_HostAddress = http://localhost:5298
+
+GET {{Clientes_HostAddress}}/api/clientes
+Accept: application/json
+
+###
+
+POST {{Clientes_HostAddress}}/api/clientes
+Content-Type: application/json
+
+{
+  "nome": "João da Silva",
+  "cpfCnpj": "123.456.789-09",
+  "telefone": "(48) 99999-0000",
+  "email": "joao@email.com",
+  "endereco": "Rua das Flores, 100 - Criciúma/SC"
+}
+
+###
+
+GET {{Clientes_HostAddress}}/api/clientes/1
+Accept: application/json
+
+###
+
+PUT {{Clientes_HostAddress}}/api/clientes/1
+Content-Type: application/json
+
+{
+  "nome": "João da Silva Souza",
+  "cpfCnpj": "12345678909",
+  "telefone": "(48) 99999-1111",
+  "email": "joao@email.com",
+  "endereco": "Rua das Flores, 100 - Criciúma/SC"
+}
+
+###
+
+DELETE {{Clientes_HostAddress}}/api/clientes/1
