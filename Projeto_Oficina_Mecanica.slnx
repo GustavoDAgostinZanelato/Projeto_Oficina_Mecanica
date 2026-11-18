@@ -2,6 +2,7 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
   </Folder>
+  <Project Path="Clientes/Clientes.csproj" />
   <Project Path="Pecas/Pecas.csproj" />
   <Project Path="Veiculos/Veiculos.csproj" />
 </Solution>
