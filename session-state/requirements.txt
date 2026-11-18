@@ -1,0 +1,302 @@
+SISTEMA DE GERENCIAMENTO DE OFICINA MECÂNICA: ARQUITETURA EM MICROSSERVIÇOS
+
+Gustavo D’Agostin Zanelato, 
+Mirela Tiscoski Pasini
+Gabriel Rodolfo Rabello
+
+Eduardo Cizeski Meneghel
+
+
+1 INTRODUÇÃO
+
+O Sistema de Gerenciamento de Oficina Mecânica tem como propósito automatizar e otimizar os fluxos operacionais de uma oficina, integrando de forma desacoplada a gestão de clientes, veículos, estoque de peças e ordens de serviço. O projeto adota arquitetura de microsserviços, com .NET, SQLite e APIs REST, para garantir modularidade, escalabilidade e manutenibilidade.
+O sistema é utilizado por três perfis: o Atendente / Recepcionista, que cadastra clientes e veículos e abre ordens de serviço; o Mecânico / Técnico, que consulta as ordens de serviço, associa as peças utilizadas e atualiza o status das manutenções; e o Gerente / Administrador, que supervisiona o estoque, acompanha as ordens de serviço e gerencia os dados gerais do negócio.
+
+2 MICROSSERVIÇOS
+
+A aplicação é composta por quatro microsserviços independentes, em .NET, cada um com seu banco SQLite e comunicação via REST. Os relacionamentos entre serviços usam chaves lógicas: o serviço guarda apenas o identificador e consulta o outro por requisição HTTP.
+
+2.1 CLIENTES
+
+Responsável pelo cadastro dos proprietários dos veículos. Armazena nome, CPF/CNPJ (único), telefone, e-mail e endereço, e oferece cadastro, consulta, alteração e remoção de clientes. É consultado pelo microsserviço de Ordens de Serviço para exibir os dados do proprietário.
+
+2.2 VEÍCULOS
+
+Responsável pelo cadastro dos veículos atendidos pela oficina. Armazena placa (única), modelo, ano e quilometragem, além do identificador do cliente proprietário (chave lógica), e oferece cadastro, listagem e atualização. É consultado pelo microsserviço de Ordens de Serviço para exibir os dados do automóvel.
+
+2.3 PEÇAS
+
+Responsável pelo estoque de peças e componentes. Armazena código (único), nome, descrição, preço unitário e quantidade em estoque, e permite gerenciar o estoque. Recebe do microsserviço de Ordens de Serviço a requisição que dá baixa automática na quantidade quando uma peça é utilizada.
+
+2.4 ORDENS DE SERVIÇO
+
+Responsável pelo registro das manutenções e reparos. Mantém a ordem de serviço (cliente, veículo, datas, status, observações, valores e taxa de serviço) e os itens de peças utilizadas, com o preço unitário no momento da baixa. É o microsserviço que orquestra as integrações descritas abaixo.
+
+2.5 INTEGRAÇÕES ENTRE OS MICROSSERVIÇOS
+
+Quadro 1: Integrações entre microsserviços.
+Integração
+Origem → Destino
+Funcionamento
+Busca simples 1
+Ordens de Serviço → Clientes
+Ao abrir ou detalhar uma OS, busca via REST os dados do proprietário do veículo.
+Busca simples 2
+Ordens de Serviço → Veículos
+Ao consultar uma OS, busca via REST os dados do automóvel (placa, modelo e ano).
+Alteração de dados
+Ordens de Serviço → Peças
+Ao adicionar uma peça à OS, dispara uma requisição (PUT/POST) que dá baixa automática no estoque.
+Fonte: Do autor (2026)
+3 REQUISITOS FUNCIONAIS
+Quadro 2: Requisitos funcionais.
+ID
+Microsserviço
+Descrição
+RF01
+Clientes
+Cadastrar clientes (nome, CPF/CNPJ, telefone e endereço).
+RF02
+Clientes
+Consultar, alterar e remover clientes cadastrados.
+RF03
+Veículos
+Cadastrar veículos vinculados a um cliente (placa, modelo e ano).
+RF04
+Veículos
+Listar e atualizar os veículos cadastrados.
+RF05
+Peças
+Gerenciar o estoque de peças (nome, código, preço unitário e quantidade).
+RF06
+Peças
+Atualizar automaticamente a quantidade em estoque quando houver baixa por utilização.
+RF07
+Ordens de Serviço
+Abrir uma Ordem de Serviço associada a um cliente e a um veículo.
+RF08
+Ordens de Serviço
+Adicionar peças utilizadas no conserto dentro de uma Ordem de Serviço.
+RF09
+Ordens de Serviço
+Registrar o histórico de manutenções, reparos e status de cada Ordem de Serviço.
+Fonte: Do autor (2026)
+
+4 TABELAS DOS MICROSSERVIÇOS
+
+Cada microsserviço possui seu próprio banco SQLite. FK Lógica indica referência a registro de outro microsserviço, obtido por integração REST.
+
+
+4.1 MICROSSERVIÇO DE CLIENTES
+Quadro 3: Tabela Clientes (microsserviço de Clientes).
+Coluna
+Tipo
+Nulo?
+Chave / Restrição
+Descrição / Regra de negócio
+Id
+INTEGER
+Não
+PK
+Identificador único do cliente
+Nome
+TEXT
+Não
+-
+Nome completo do cliente
+CpfCnpj
+TEXT
+Não
+UNIQUE
+CPF ou CNPJ do cliente
+Telefone
+TEXT
+Sim
+-
+Número de contato/WhatsApp
+Email
+TEXT
+Sim
+-
+Endereço de e-mail
+Endereco
+TEXT
+Sim
+-
+Endereço completo do cliente
+Fonte: Do autor (2026)
+
+4.2 MICROSSERVIÇO DE VEÍCULOS
+Quadro 4: Tabela Veiculos (microsserviço de Veículos).
+Coluna
+Tipo
+Nulo?
+Chave / Restrição
+Descrição / Regra de negócio
+Id
+INTEGER
+Não
+PK
+Identificador único do veículo
+ClienteId
+INTEGER
+Não
+FK Lógica
+Referência lógica ao cliente proprietário
+Placa
+TEXT
+Não
+UNIQUE
+Placa do veículo
+Modelo
+TEXT
+Não
+-
+Modelo do veículo (ex.: Gol 1.0)
+Ano
+INTEGER
+Não
+-
+Ano de fabricação / modelo
+Quilometragem
+INTEGER
+Sim
+-
+Quilometragem atual do veículo
+Fonte: Do autor (2026)
+
+4.3 MICROSSERVIÇO DE PEÇAS
+Quadro 5: Tabela Pecas (microsserviço de Peças).
+Coluna
+Tipo
+Nulo?
+Chave / Restrição
+Descrição / Regra de negócio
+Id
+INTEGER
+Não
+PK
+Identificador único da peça
+Codigo
+TEXT
+Não
+UNIQUE
+Código de barras / referência interna
+Nome
+TEXT
+Não
+-
+Nome da peça / componente
+Descricao
+TEXT
+Sim
+-
+Descrição detalhada da peça
+PrecoUnitario
+REAL
+Não
+-
+Preço unitário em Reais (R$)
+QuantidadeEstoque
+INTEGER
+Não
+-
+Quantidade disponível em estoque
+Fonte: Do autor (2026)
+
+
+4.4 MICROSSERVIÇO DE ORDENS DE SERVIÇO
+Quadro 6: Tabela OrdensServico (microsserviço de Ordens de Serviço).
+Coluna
+Tipo
+Nulo?
+Chave / Restrição
+Descrição / Regra de negócio
+Id
+INTEGER
+Não
+PK
+Identificador único da ordem de serviço
+ClienteId
+INTEGER
+Não
+FK Lógica
+ID do cliente obtido via integração REST
+VeiculoId
+INTEGER
+Não
+FK Lógica
+ID do veículo obtido via integração REST
+DataCriacaoServico
+DATETIME
+Não
+-
+Data de abertura da OS (YYYY-MM-DD)
+DataInicioServico
+DATETIME
+Não
+-
+Data de início do serviço
+DataConclusaoServico
+DATETIME
+Sim
+-
+Data de conclusão da OS (YYYY-MM-DD)
+Status
+TEXT
+Não
+-
+Status (Aberta, Em Andamento, Concluída, Cancelada)
+ValorTotal
+DECIMAL
+Sim
+-
+Valor total recalculado da OS
+Observacoes
+TEXT
+Sim
+-
+Observações e diagnósticos técnicos
+TaxaServico
+DECIMAL
+Sim
+-
+Taxa cobrada pelo serviço
+ValorBaseServico
+DECIMAL
+Sim
+-
+Valor da soma dos produtos
+Fonte: Do autor (2026)
+Quadro 7: Tabela ItensOrdemServico (microsserviço de Ordens de Serviço).
+Coluna
+Tipo
+Nulo?
+Chave / Restrição
+Descrição / Regra de negócio
+Id
+INTEGER
+Não
+PK (AutoIncrement)
+Identificador único do item da OS
+OrdemServicoId
+INTEGER
+Não
+FK (OrdensServico)
+ID da Ordem de Serviço pai
+PecaId
+INTEGER
+Não
+FK Lógica (Pecas)
+ID da peça consumida do estoque
+Quantidade
+INTEGER
+Não
+-
+Quantidade de peças consumidas nesta OS
+PrecoUnitarioMomento
+DECIMAL
+Não
+-
+Preço unitário da peça no momento da baixa
+Fonte: Do autor (2026)

@@ -5,4 +5,5 @@
   <Project Path="Clientes/Clientes.csproj" />
   <Project Path="Pecas/Pecas.csproj" />
   <Project Path="Veiculos/Veiculos.csproj" />
+  <Project Path="OrdemServico/OrdemServico.csproj" />
 </Solution>

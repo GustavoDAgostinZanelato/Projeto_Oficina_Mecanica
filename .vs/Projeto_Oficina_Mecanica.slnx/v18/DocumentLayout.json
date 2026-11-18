@@ -1,13 +1,64 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\",
+  "WorkspaceRootPath": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Clientes\\Controllers\\PecasController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C85D580E-3108-C2D8-F506-F044A1057872}|Pecas\\Pecas.csproj|c:\\users\\mirela\\source\\repos\\projeto_oficina_mecanica\\pecas\\pecas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\controllers\\ordensservicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\controllers\\ordensservicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEEF427C-167E-6801-3616-B78E50469F55}|Clientes\\Clientes.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\clientes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEEF427C-167E-6801-3616-B78E50469F55}|Clientes\\Clientes.csproj|solutionrelative:clientes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\servicos\\servordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\servicos\\servordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\models\\ordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\models\\ordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\ordemservico\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3F1B2C-F2AF-AAD1-5063-2437B9C52B02}|OrdemServico\\OrdemServico.csproj|solutionrelative:ordemservico\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:session-state\\build\\OrdemServico\\OrdemServico.pdb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.deps.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:session-state\\build\\OrdemServico\\OrdemServico.deps.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C85D580E-3108-C2D8-F506-F044A1057872}|Pecas\\Pecas.csproj|c:\\users\\gabriel.rabello\\documents\\github\\projeto_oficina_mecanica\\pecas\\pecas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C85D580E-3108-C2D8-F506-F044A1057872}|Pecas\\Pecas.csproj|solutionrelative:pecas\\pecas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -18,38 +69,304 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 28,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PecasController.cs",
-              "DocumentMoniker": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
-              "RelativeDocumentMoniker": "Clientes\\Controllers\\PecasController.cs",
-              "ToolTip": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
-              "RelativeToolTip": "Clientes\\Controllers\\PecasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-12T00:09:07.653Z",
+              "DocumentIndex": 2,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\README.md",
+              "RelativeDocumentMoniker": "OrdemServico\\README.md",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\README.md",
+              "RelativeToolTip": "OrdemServico\\README.md",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAEwB4AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-18T23:03:54.363Z",
               "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\Clientes\\Program.cs",
+              "RelativeDocumentMoniker": "Clientes\\Program.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\Clientes\\Program.cs",
+              "RelativeToolTip": "Clientes\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T23:01:29.818Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServOrdemServico.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Servicos\\ServOrdemServico.cs",
+              "RelativeDocumentMoniker": "OrdemServico\\Servicos\\ServOrdemServico.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Servicos\\ServOrdemServico.cs",
+              "RelativeToolTip": "OrdemServico\\Servicos\\ServOrdemServico.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAiwLAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T23:00:54.172Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrdemServico.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Models\\OrdemServico.cs",
+              "RelativeDocumentMoniker": "OrdemServico\\Models\\OrdemServico.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Models\\OrdemServico.cs",
+              "RelativeToolTip": "OrdemServico\\Models\\OrdemServico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T23:00:49.208Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OrdemServico\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OrdemServico\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T22:49:07.977Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "OrdemServico\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Data\\DataContext.cs",
+              "RelativeToolTip": "OrdemServico\\Data\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T22:49:04.964Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Program.cs",
+              "RelativeDocumentMoniker": "OrdemServico\\Program.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Program.cs",
+              "RelativeToolTip": "OrdemServico\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAvwD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T22:48:48.205Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdemServico.pdb",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.pdb",
+              "RelativeDocumentMoniker": "session-state\\build\\OrdemServico\\OrdemServico.pdb",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.pdb",
+              "RelativeToolTip": "session-state\\build\\OrdemServico\\OrdemServico.pdb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002276|",
+              "WhenOpened": "2026-11-18T22:48:21.186Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrdemServico.deps.json",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.deps.json",
+              "RelativeDocumentMoniker": "session-state\\build\\OrdemServico\\OrdemServico.deps.json",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.deps.json",
+              "RelativeToolTip": "session-state\\build\\OrdemServico\\OrdemServico.deps.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T22:48:20.166Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrdemServico.staticwebassets.endpoints.json",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json",
+              "RelativeDocumentMoniker": "session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json",
+              "RelativeToolTip": "session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.endpoints.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T22:48:19.415Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrdemServico.staticwebassets.runtime.json",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json",
+              "RelativeDocumentMoniker": "session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json",
+              "RelativeToolTip": "session-state\\build\\OrdemServico\\OrdemServico.staticwebassets.runtime.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T22:48:18.061Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Microsoft.CodeAnalysis.dll",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll",
+              "RelativeDocumentMoniker": "session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll",
+              "RelativeToolTip": "session-state\\build\\OrdemServico\\Microsoft.CodeAnalysis.dll",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001697|",
+              "WhenOpened": "2026-11-18T22:48:16.987Z",
               "OwnerCaption": "%3"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "OrdensServicoController.cs",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Controllers\\OrdensServicoController.cs",
+              "RelativeDocumentMoniker": "OrdemServico\\Controllers\\OrdensServicoController.cs",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\OrdemServico\\Controllers\\OrdensServicoController.cs",
+              "RelativeToolTip": "OrdemServico\\Controllers\\OrdensServicoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T22:46:36.647Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PecasController.cs",
+              "DocumentMoniker": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
+              "ToolTip": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Clientes\\Controllers\\PecasController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T00:09:07.653Z",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Pecas",
-              "DocumentMoniker": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Pecas\\Pecas.csproj",
+              "DocumentMoniker": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\Pecas\\Pecas.csproj",
               "RelativeDocumentMoniker": "Pecas\\Pecas.csproj",
-              "ToolTip": "C:\\Users\\Mirela\\source\\repos\\Projeto_Oficina_Mecanica\\Pecas\\Pecas.csproj",
+              "ToolTip": "C:\\Users\\gabriel.rabello\\Documents\\GitHub\\Projeto_Oficina_Mecanica\\Pecas\\Pecas.csproj",
               "RelativeToolTip": "Pecas\\Pecas.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-11-12T00:05:58.995Z",
               "OwnerCaption": "Pecas"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1046,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }
