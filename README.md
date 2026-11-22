@@ -177,16 +177,20 @@ docker run -p 5298:8080 oficina-clientes
 
 ## Render
 
-A publicação é descrita no [`render.yaml`](render.yaml) (Blueprint com os 4 serviços Docker, plano gratuito):
+Aplicação publicada no [Render](https://render.com/) (plano gratuito). Cada microsserviço é um Web Service Docker criado a partir deste repositório (`Dockerfile` de cada pasta como caminho do Dockerfile e a própria pasta como contexto de build). O [`render.yaml`](render.yaml) documenta essa configuração.
 
-1. No Dashboard do Render: **New → Blueprint** e selecionar este repositório.
-2. Confirmar a criação dos 4 serviços e aguardar o deploy (cada um expõe `/health`).
-3. Conferir no Dashboard a URL real de cada serviço. Se alguma diferir da tabela abaixo, ajustar as variáveis `Microservices__*Url` do serviço de Ordens de Serviço e fazer redeploy.
+| Microsserviço | URL | Documentação (Scalar) |
+| --- | --- | --- |
+| Clientes | https://clientes-aj8n.onrender.com | [/scalar/v1](https://clientes-aj8n.onrender.com/scalar/v1) |
+| Veículos | https://veiculos-qebj.onrender.com | [/scalar/v1](https://veiculos-qebj.onrender.com/scalar/v1) |
+| Peças | https://pecas.onrender.com | [/scalar/v1](https://pecas.onrender.com/scalar/v1) |
+| Ordens de Serviço | https://ordemservico-mdbx.onrender.com | [/scalar/v1](https://ordemservico-mdbx.onrender.com/scalar/v1) |
 
-> No plano gratuito os serviços "dormem" após ~15 min sem uso (a primeira chamada pode levar cerca de 50 s) e o SQLite é recriado a cada deploy/restart.
+A raiz (`/`) de cada serviço redireciona para o Scalar, onde é possível testar os endpoints. Variáveis de ambiente usadas: `PORT=8080` em todos e, no serviço de Ordens de Serviço, `Microservices__ClientesUrl`, `Microservices__VeiculosUrl` e `Microservices__PecasUrl` com as URLs da tabela acima.
 
-| Microsserviço | URL esperada |
-| --- | --- |
+> No plano gratuito os serviços "dormem" após ~15 min sem uso (a primeira chamada pode levar cerca de 50 s) e o SQLite é recriado a cada deploy/restart. Para testar o fluxo completo, acorde os 4 serviços acessando o `/health` de cada um e cadastre cliente, veículo e peça antes de abrir a OS.
+
+--- | --- |
 | Clientes | https://oficina-mecanica-clientes.onrender.com |
 | Veículos | https://oficina-mecanica-veiculos.onrender.com |
 | Peças | https://oficina-mecanica-pecas.onrender.com |

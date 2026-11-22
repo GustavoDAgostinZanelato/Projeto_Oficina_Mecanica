@@ -7,7 +7,7 @@
 
 services:
   - type: web
-    name: oficina-mecanica-clientes
+    name: clientes
     runtime: docker
     plan: free
     region: oregon
@@ -22,7 +22,7 @@ services:
         value: Production
 
   - type: web
-    name: oficina-mecanica-veiculos
+    name: veiculos
     runtime: docker
     plan: free
     region: oregon
@@ -37,7 +37,7 @@ services:
         value: Production
 
   - type: web
-    name: oficina-mecanica-pecas
+    name: pecas
     runtime: docker
     plan: free
     region: oregon
@@ -52,7 +52,7 @@ services:
         value: Production
 
   - type: web
-    name: oficina-mecanica-ordens-servico
+    name: ordemservico
     runtime: docker
     plan: free
     region: oregon
@@ -65,11 +65,11 @@ services:
         value: "8080"
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
-      # URLs públicas dos outros serviços. Se o Render acrescentar um sufixo
-      # ao nome (nome já em uso), ajuste aqui para a URL real do Dashboard.
+      # URLs públicas reais dos outros serviços (o Render acrescenta sufixo
+      # ao nome quando ele já está em uso).
       - key: Microservices__ClientesUrl
-        value: https://oficina-mecanica-clientes.onrender.com
+        value: https://clientes-aj8n.onrender.com
       - key: Microservices__VeiculosUrl
-        value: https://oficina-mecanica-veiculos.onrender.com
+        value: https://veiculos-qebj.onrender.com
       - key: Microservices__PecasUrl
-        value: https://oficina-mecanica-pecas.onrender.com
+        value: https://pecas.onrender.com
