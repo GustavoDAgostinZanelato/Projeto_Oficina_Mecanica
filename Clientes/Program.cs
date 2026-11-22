@@ -50,6 +50,7 @@ app.UseForwardedHeaders(forwardedHeadersOptions);
 
 app.MapOpenApi();
 app.MapScalarApiReference();
+app.MapGet("/", () => Results.Redirect("/scalar/v1")).ExcludeFromDescription();
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
 app.UseCors();
