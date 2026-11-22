@@ -1,0 +1,75 @@
+# Blueprint do Render — 4 microsserviços (Docker) no plano gratuito.
+# Uso: Dashboard > New > Blueprint > selecionar este repositório.
+#
+# Atenção: no plano free o disco é efêmero. O SQLite (/data) é recriado
+# a cada deploy/restart e os serviços "dormem" após ~15 min sem tráfego
+# (a primeira requisição pode levar ~50 s).
+
+services:
+  - type: web
+    name: oficina-mecanica-clientes
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerContext: ./Clientes
+    dockerfilePath: ./Clientes/Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+  - type: web
+    name: oficina-mecanica-veiculos
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerContext: ./Veiculos
+    dockerfilePath: ./Veiculos/Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+  - type: web
+    name: oficina-mecanica-pecas
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerContext: ./Pecas
+    dockerfilePath: ./Pecas/Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+  - type: web
+    name: oficina-mecanica-ordens-servico
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerContext: ./OrdemServico
+    dockerfilePath: ./OrdemServico/Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      # URLs públicas dos outros serviços. Se o Render acrescentar um sufixo
+      # ao nome (nome já em uso), ajuste aqui para a URL real do Dashboard.
+      - key: Microservices__ClientesUrl
+        value: https://oficina-mecanica-clientes.onrender.com
+      - key: Microservices__VeiculosUrl
+        value: https://oficina-mecanica-veiculos.onrender.com
+      - key: Microservices__PecasUrl
+        value: https://oficina-mecanica-pecas.onrender.com

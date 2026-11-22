@@ -177,10 +177,22 @@ docker run -p 5298:8080 oficina-clientes
 
 ## Render
 
-> Publicação em andamento — as URLs públicas serão listadas aqui.
+A publicação é descrita no [`render.yaml`](render.yaml) (Blueprint com os 4 serviços Docker, plano gratuito):
 
-| Microsserviço | URL |
+1. No Dashboard do Render: **New → Blueprint** e selecionar este repositório.
+2. Confirmar a criação dos 4 serviços e aguardar o deploy (cada um expõe `/health`).
+3. Conferir no Dashboard a URL real de cada serviço. Se alguma diferir da tabela abaixo, ajustar as variáveis `Microservices__*Url` do serviço de Ordens de Serviço e fazer redeploy.
+
+> No plano gratuito os serviços "dormem" após ~15 min sem uso (a primeira chamada pode levar cerca de 50 s) e o SQLite é recriado a cada deploy/restart.
+
+| Microsserviço | URL esperada |
 | --- | --- |
+| Clientes | https://oficina-mecanica-clientes.onrender.com |
+| Veículos | https://oficina-mecanica-veiculos.onrender.com |
+| Peças | https://oficina-mecanica-pecas.onrender.com |
+| Ordens de Serviço | https://oficina-mecanica-ordens-servico.onrender.com |
+
+--- | --- |
 | Clientes | _a definir_ |
 | Veículos | _a definir_ |
 | Peças | _a definir_ |

@@ -1,6 +1,13 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
+    <File Path="README.md" />
+    <File Path="render.yaml" />
+  </Folder>
+  <Folder Name="/Solution Items/.docs/">
+    <File Path=".docs/Descritivo_Projeto.pdf" />
+    <File Path=".docs/Projeto_Oficina_Mecanica.docx" />
+    <File Path=".docs/Schema_Banco_de_Dados_Oficina.xlsx" />
   </Folder>
   <Project Path="Clientes/Clientes.csproj" />
   <Project Path="Pecas/Pecas.csproj" />
