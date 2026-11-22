@@ -63,7 +63,7 @@ namespace VeiculosApp.Servicos
 
             if(veiculo == null)
             {
-                throw new Exception("Veículo não encontrado");
+                throw new KeyNotFoundException("Veículo não encontrado");
             }
 
             return veiculo;

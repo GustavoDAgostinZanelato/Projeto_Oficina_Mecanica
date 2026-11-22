@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PedidoServico.DTO;
+namespace OrdemServicoApp.DTO;
 
 public class AtualizarOrdemServicoDTO
 {

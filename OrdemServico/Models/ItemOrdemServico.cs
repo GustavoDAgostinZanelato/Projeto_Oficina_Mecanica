@@ -1,4 +1,4 @@
-namespace PedidoServico.Models;
+namespace OrdemServicoApp.Models;
 
 public class ItemOrdemServico
 {

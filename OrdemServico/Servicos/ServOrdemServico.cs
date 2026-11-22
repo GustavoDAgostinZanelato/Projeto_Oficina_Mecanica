@@ -2,11 +2,11 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
-using PedidoServico.Data;
-using PedidoServico.DTO;
-using PedidoServico.Models;
+using OrdemServicoApp.Data;
+using OrdemServicoApp.DTO;
+using OrdemServicoApp.Models;
 
-namespace PedidoServico.Servicos;
+namespace OrdemServicoApp.Servicos;
 
 public class ServOrdemServico
 {
@@ -103,8 +103,15 @@ public class ServOrdemServico
             throw new KeyNotFoundException($"Ordem de serviço com ID {ordemId} não encontrada.");
         }
 
+        if (StatusFinalizado(ordem.Status))
+        {
+            throw new OperacaoInvalidaException(
+                $"Não é possível adicionar peças a uma ordem de serviço com status '{ordem.Status}'.");
+        }
+
         var pecaClient = _httpClientFactory.CreateClient("Pecas");
-        using var consulta = await pecaClient.GetAsync($"/api/pecas/{dados.PecaId}", cancellationToken);
+        using var consulta = await EnviarAsync("Peças",
+            () => pecaClient.GetAsync($"/api/pecas/{dados.PecaId}", cancellationToken));
         if (consulta.StatusCode == HttpStatusCode.NotFound)
         {
             throw new KeyNotFoundException($"Peça com ID {dados.PecaId} não encontrada.");
@@ -123,7 +130,8 @@ public class ServOrdemServico
             JsonSerializer.Serialize(new { quantidade = dados.Quantidade }),
             Encoding.UTF8,
             "application/json");
-        using var respostaBaixa = await pecaClient.PostAsync($"/api/pecas/{dados.PecaId}/baixas", baixa, cancellationToken);
+        using var respostaBaixa = await EnviarAsync("Peças",
+            () => pecaClient.PostAsync($"/api/pecas/{dados.PecaId}/baixas", baixa, cancellationToken));
 
         if (respostaBaixa.StatusCode == HttpStatusCode.NotFound)
         {
@@ -163,7 +171,7 @@ public class ServOrdemServico
     private async Task ValidarExistenciaAsync(string clientName, string path, CancellationToken cancellationToken)
     {
         var client = _httpClientFactory.CreateClient(clientName);
-        using var response = await client.GetAsync(path, cancellationToken);
+        using var response = await EnviarAsync(clientName, () => client.GetAsync(path, cancellationToken));
         if (response.StatusCode == HttpStatusCode.NotFound)
         {
             throw new RecursoNaoEncontradoException(clientName, path);
@@ -173,6 +181,26 @@ public class ServOrdemServico
             throw new IntegracaoException(clientName, (int)response.StatusCode);
         }
     }
+
+    private static async Task<HttpResponseMessage> EnviarAsync(string microsservico, Func<Task<HttpResponseMessage>> requisicao)
+    {
+        try
+        {
+            return await requisicao();
+        }
+        catch (HttpRequestException exception)
+        {
+            throw new IntegracaoException(microsservico, exception);
+        }
+        catch (TaskCanceledException exception) when (!exception.CancellationToken.IsCancellationRequested)
+        {
+            // Timeout do HttpClient (e não cancelamento pelo chamador).
+            throw new IntegracaoException(microsservico, exception);
+        }
+    }
+
+    private static bool StatusFinalizado(string status) =>
+        status.Trim().ToLowerInvariant() is "concluída" or "concluida" or "concluido" or "cancelada";
 
     private static void Recalcular(OrdemServico ordem)
     {

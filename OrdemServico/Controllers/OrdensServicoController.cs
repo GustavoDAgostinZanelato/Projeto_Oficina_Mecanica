@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using PedidoServico.DTO;
-using PedidoServico.Models;
-using PedidoServico.Servicos;
+using OrdemServicoApp.DTO;
+using OrdemServicoApp.Models;
+using OrdemServicoApp.Servicos;
 
-namespace PedidoServico.Controllers;
+namespace OrdemServicoApp.Controllers;
 
 [ApiController]
 [Route("api/ordens-servicos")]
@@ -93,6 +93,10 @@ public class OrdensServicoController : ControllerBase
         catch (EstoqueInsuficienteException exception)
         {
             return Conflict(new ProblemDetails { Status = 409, Title = "Estoque insuficiente", Detail = exception.Message });
+        }
+        catch (OperacaoInvalidaException exception)
+        {
+            return Conflict(new ProblemDetails { Status = 409, Title = "Operação inválida", Detail = exception.Message });
         }
         catch (IntegracaoException exception)
         {

@@ -1,4 +1,4 @@
-namespace PedidoServico.DTO;
+namespace OrdemServicoApp.DTO;
 
 public class OrdemServicoDTO
 {

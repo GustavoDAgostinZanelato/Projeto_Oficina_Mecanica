@@ -7,3 +7,5 @@
 *.csproj.user
 ~$*
 *.slnLaunch.user
+
+session-state/

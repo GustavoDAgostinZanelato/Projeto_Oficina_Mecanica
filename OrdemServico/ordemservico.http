@@ -1,0 +1,43 @@
+@OrdemServico_HostAddress = http://localhost:5299
+
+GET {{OrdemServico_HostAddress}}/health
+
+###
+
+GET {{OrdemServico_HostAddress}}/api/ordens-servicos
+Accept: application/json
+
+###
+
+POST {{OrdemServico_HostAddress}}/api/ordens-servicos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "veiculoId": 1,
+  "observacoes": "Troca de óleo",
+  "taxaServico": 80.00
+}
+
+###
+
+POST {{OrdemServico_HostAddress}}/api/ordens-servicos/1/pecas
+Content-Type: application/json
+
+{
+  "pecaId": 1,
+  "quantidade": 1
+}
+
+###
+
+PUT {{OrdemServico_HostAddress}}/api/ordens-servicos/1
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "veiculoId": 1,
+  "status": "Em Andamento",
+  "observacoes": "Troca de óleo",
+  "taxaServico": 80.00
+}

@@ -62,6 +62,10 @@ namespace VeiculosApp.Controllers
 
                 return Ok(veiculo);
             }
+            catch (KeyNotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
             catch (Exception e)
             {
                 return BadRequest(e.Message);

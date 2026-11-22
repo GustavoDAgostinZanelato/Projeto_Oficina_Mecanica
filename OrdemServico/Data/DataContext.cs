@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using PedidoServico.Models;
+using OrdemServicoApp.Models;
 
-namespace PedidoServico.Data;
+namespace OrdemServicoApp.Data;
 
 public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
 {

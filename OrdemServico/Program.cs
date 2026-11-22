@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
-using PedidoServico.Data;
-using PedidoServico.Servicos;
+using OrdemServicoApp.Data;
+using OrdemServicoApp.Servicos;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,11 +31,20 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddHttpClient("Clientes", client =>
-    client.BaseAddress = new Uri(builder.Configuration["Microservices:ClientesUrl"] ?? "http://localhost:5298"));
+{
+    client.BaseAddress = new Uri(builder.Configuration["Microservices:ClientesUrl"] ?? "http://localhost:5298");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 builder.Services.AddHttpClient("Veiculos", client =>
-    client.BaseAddress = new Uri(builder.Configuration["Microservices:VeiculosUrl"] ?? "http://localhost:5299"));
+{
+    client.BaseAddress = new Uri(builder.Configuration["Microservices:VeiculosUrl"] ?? "http://localhost:5296");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 builder.Services.AddHttpClient("Pecas", client =>
-    client.BaseAddress = new Uri(builder.Configuration["Microservices:PecasUrl"] ?? "http://localhost:5300"));
+{
+    client.BaseAddress = new Uri(builder.Configuration["Microservices:PecasUrl"] ?? "http://localhost:5297");
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 
 var app = builder.Build();
 
@@ -55,7 +64,7 @@ app.UseForwardedHeaders(forwardedHeadersOptions);
 
 app.MapOpenApi();
 app.MapScalarApiReference();
-app.MapGet("/api/ordens-servicos/health", () => Results.Ok(new { status = "ok" }));
+app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 app.UseCors();
 app.UseHttpsRedirection();
 app.MapControllers();
